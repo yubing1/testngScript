@@ -34,7 +34,7 @@ public class SendMail {
 //        message.setText("这就是个测试报告的发送测试/just a test-report");
         Message message = getTestReport(session);
         Transport transport = session.getTransport();
-        transport.connect("396220003@qq.com", "pgfgceywfjldbghg");
+        transport.connect("*********@qq.com", "********");
         transport.sendMessage(message, message.getAllRecipients());
         transport.close();
     }
