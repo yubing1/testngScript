@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Second suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="allTestsInAClass(failed)">
+    <classes>
+      <class name="test1">
+        <methods>
+          <include name="testThrid"/>
+        </methods>
+      </class> <!-- test1 -->
+    </classes>
+  </test> <!-- allTestsInAClass(failed) -->
+</suite> <!-- Failed suite [Second suite] -->
