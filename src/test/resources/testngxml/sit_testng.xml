@@ -10,10 +10,10 @@
 
     <test name = "allTestsInAClass" >
         <classes>
-            <class name="test1">
-                <methods>
-                    <include name="testThrid"/>
-                </methods>
+            <class name="com.apitest.it.demotest.test1">
+                <!--<methods>-->
+                    <!--<include name="testThrid"/>-->
+                <!--</methods>-->
             </class>
         </classes>
     </test>

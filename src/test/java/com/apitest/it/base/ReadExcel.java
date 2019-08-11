@@ -10,8 +10,10 @@ import org.testng.annotations.Test;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.function.Consumer;
 
-public class ReadExcel {
+public class ReadExcel implements Iterator<Object[]> {
 
     public ExcelResultVo readExcel(String filePath, String sheetNumber) throws IOException {
 
@@ -59,6 +61,25 @@ public class ReadExcel {
     public void test() throws IOException {
         ExcelResultVo resultVo = readExcel("aa.xls", "5555");
 
+
+    }
+
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
+
+    @Override
+    public Object[] next() {
+        return new Object[0];
+    }
+
+    @Override
+    public void remove() {
+
+    }
+
+    public void forEachRemaining(Consumer<? super Object[]> action) {
 
     }
 }

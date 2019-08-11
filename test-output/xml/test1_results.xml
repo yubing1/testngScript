@@ -6,7 +6,7 @@
            skipped="0"
            time="0.313">
   <properties />
-            <testcase name="testThrid" time="0.313" classname="test1">
+            <testcase name="testThrid" time="0.313" classname="com.apitest.it.demotest.test1">
                 <failure type="org.testng.internal.reflect.MethodMatcherException"
                   message="
 Data provider mismatch

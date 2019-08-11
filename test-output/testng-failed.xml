@@ -7,11 +7,11 @@
   </listeners>
   <test name="allTestsInAClass(failed)">
     <classes>
-      <class name="test1">
+      <class name="com.apitest.it.demotest.test1">
         <methods>
           <include name="testThrid"/>
         </methods>
-      </class> <!-- test1 -->
+      </class> <!-- com.apitest.it.demotest.test1 -->
     </classes>
   </test> <!-- allTestsInAClass(failed) -->
 </suite> <!-- Failed suite [Second suite] -->
