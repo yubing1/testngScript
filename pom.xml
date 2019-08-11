@@ -51,6 +51,11 @@
             <version>2.5.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.0.1</version>
+        </dependency>
 
     </dependencies>
 

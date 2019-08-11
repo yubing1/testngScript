@@ -10,7 +10,11 @@
 
     <test name = "allTestsInAClass" >
         <classes>
-            <class name="test1"/>
+            <class name="test1">
+                <methods>
+                    <include name="testThrid"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

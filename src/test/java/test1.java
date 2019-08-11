@@ -1,5 +1,8 @@
+import com.apitest.it.dataprovider.test1DataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.HashMap;
 
 public class test1 {
 
@@ -13,8 +16,8 @@ public class test1 {
         System.out.println("bbccdd");
     }
 
-    @Test
-    public void testThrid(){
+    @Test(dataProvider = "testThrid", dataProviderClass = test1DataProvider.class)
+    public void testThrid(HashMap map, String code){
         Assert.assertEquals(1,1);
     }
 }
