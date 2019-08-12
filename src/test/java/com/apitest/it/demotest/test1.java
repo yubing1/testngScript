@@ -1,12 +1,11 @@
 package com.apitest.it.demotest;
 
-import com.apitest.it.VO.ExcelResultVo;
+
 import com.apitest.it.dataprovider.test1DataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.HashMap;
-import java.util.Iterator;
+
 
 public class test1 {
 

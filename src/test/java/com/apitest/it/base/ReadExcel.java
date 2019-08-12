@@ -6,16 +6,14 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
-import org.testng.annotations.Test;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Consumer;
 
-public class ReadExcel implements Iterator<Object[]> {
+
+public class ReadExcel {
 
     public Iterator<Object[]> readExcel(String filePath, String sheetNumber) throws IOException {
 
@@ -62,29 +60,5 @@ public class ReadExcel implements Iterator<Object[]> {
         workbook.write(xlsStream);
     }
 
-    @Test
-    public void test() throws IOException {
-        Iterator<Object[]> iterator = readExcel("aa.xls", "5555");
 
-
-    }
-
-    @Override
-    public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public Object[] next() {
-        return new Object[0];
-    }
-
-    @Override
-    public void remove() {
-
-    }
-
-    public void forEachRemaining(Consumer<? super Object[]> action) {
-
-    }
 }
