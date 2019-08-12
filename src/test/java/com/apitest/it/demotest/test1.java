@@ -21,7 +21,7 @@ public class test1 {
     }
 
     @Test(dataProvider = "testThrid", dataProviderClass = test1DataProvider.class)
-    public void testThrid(Iterator<Object[]> input){
+    public void testThrid(HashMap map, String code){
         Assert.assertEquals(1,1);
     }
 }

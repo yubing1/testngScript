@@ -13,7 +13,8 @@ public class test1DataProvider {
 
     @DataProvider(name = "testThrid")
     public Iterator<Object[]> testThrid() throws IOException {
-        ExcelResultVo resultVo = readExcel.readExcel("aa.xls", "5555");
-        return resultVo;
+        Iterator<Object[]> iterator = readExcel.readExcel("aa.xls", "5555");
+        System.out.println("数据已经读取了！");
+        return iterator;
     }
 }

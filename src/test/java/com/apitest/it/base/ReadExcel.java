@@ -9,15 +9,16 @@ import org.apache.poi.ss.usermodel.*;
 import org.testng.annotations.Test;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ReadExcel implements Iterator<Object[]> {
 
-    public ExcelResultVo readExcel(String filePath, String sheetNumber) throws IOException {
+    public Iterator<Object[]> readExcel(String filePath, String sheetNumber) throws IOException {
 
-        ExcelResultVo resultVo = new ExcelResultVo();
         HashMap<String, Object> map = new HashMap<String, Object>();
         String filePathNew = "src/test/resources/dataprovider/" + filePath;
         Workbook workbook = null;
@@ -26,17 +27,21 @@ public class ReadExcel implements Iterator<Object[]> {
         Sheet sheet = workbook.getSheet(sheetNumber);
         Row row0 = sheet.getRow(0);
         Row row1 = sheet.getRow(1);
+        Object[] objects = new Object[2];
+        List<Object[]> list = new ArrayList<>();
+
         for (int i = 0; i < row0.getLastCellNum(); i++) {
             String key = row0.getCell(i).getStringCellValue();
             String value = row1.getCell(i).getStringCellValue();
             if (StringUtils.equals(key, "code")) {
-                resultVo.setCode(value);
+                objects[1] = value;
                 continue;
             }
             map.put(key, value);
+            objects[0] = map;
         }
-        resultVo.setMap(map);
-        return resultVo;
+        list.add(objects);
+        return list.iterator();
     }
 
     public void writeExcel() throws IOException {
@@ -59,7 +64,7 @@ public class ReadExcel implements Iterator<Object[]> {
 
     @Test
     public void test() throws IOException {
-        ExcelResultVo resultVo = readExcel("aa.xls", "5555");
+        Iterator<Object[]> iterator = readExcel("aa.xls", "5555");
 
 
     }

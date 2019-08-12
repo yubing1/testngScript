@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="allTestsInAClass"
-           tests="2"
+           tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="19.390">
+           time="14.730">
   <properties />
   
   
-            <testcase name="testOne" time="0.019" classname="com.apitest.it.demotest.test1" />
-                <testcase name="testSecond" time="19.371" classname="com.apitest.it.demotest.test1" />
+            <testcase name="testOne" time="0.050" classname="com.apitest.it.demotest.test1" />
+                <testcase name="testSecond" time="0.000" classname="com.apitest.it.demotest.test1" />
+                <testcase name="testThrid" time="14.680" classname="com.apitest.it.demotest.test1" />
       
 </testsuite>
