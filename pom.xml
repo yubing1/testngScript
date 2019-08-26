@@ -61,6 +61,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>0.14</version>
+        </dependency>
 
     </dependencies>
 
@@ -85,7 +90,7 @@
                     <skipTests>false</skipTests>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>src/test/res/sit_testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testngxml/sit_testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>
@@ -100,27 +105,27 @@
                     <forkMode>always</forkMode>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <includePluginDependencies>true</includePluginDependencies>
-                    <mainClass>com.testNGPro.utils.SendMail</mainClass>
-                    <!--<arguments>-->
-                        <!--<argument>11</argument>-->
-                        <!--<argument>22</argument>-->
-                    <!--</arguments>-->
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>exec-maven-plugin</artifactId>-->
+                <!--<version>1.1.1</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>java</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<includePluginDependencies>true</includePluginDependencies>-->
+                    <!--<mainClass>com.testNGPro.utils.SendMail</mainClass>-->
+                    <!--&lt;!&ndash;<arguments>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<argument>11</argument>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<argument>22</argument>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</arguments>&ndash;&gt;-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
