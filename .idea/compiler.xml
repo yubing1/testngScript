@@ -8,10 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="testngPro" />
         <module name="testNGPro (1)" />
+        <module name="testNGPro" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="testNGPro" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
